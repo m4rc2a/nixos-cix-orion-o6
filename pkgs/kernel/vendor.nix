@@ -37,10 +37,6 @@ in
 
   kernelPatches = [
     {
-      name = "fwnode-regulator-fix-type-error";
-      patch = ./patches/fwnode-regulator-fix-type-error.patch;
-    }
-    {
       name = "rtl-wifi-fix-makefile-includes";
       patch = ./patches/rtl-wifi-fix-makefile-includes.patch;
     }
