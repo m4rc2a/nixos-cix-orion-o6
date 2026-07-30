@@ -1,6 +1,11 @@
 { config, pkgs, lib, ... }:
 
+let
+  cixOverlay = import ../pkgs/kernel/overlays.nix;
+in
 {
+  nixpkgs.overlays = [ cixOverlay.default ];
+
   boot = {
     kernelPackages = pkgs.cixVendorKernelPackages;
 
