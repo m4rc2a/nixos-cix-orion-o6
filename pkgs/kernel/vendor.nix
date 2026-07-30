@@ -73,6 +73,7 @@ in
   allowImportFromDerivation = true;
 
 }).overrideAttrs (old: {
+  features = (old.features or { }) // { efiBootStub = true; };
   name = "k";
 
   nativeBuildInputs = (old.nativeBuildInputs or [ ]) ++ [ ubootTools ccache ];
